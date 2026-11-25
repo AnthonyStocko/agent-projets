@@ -10,5 +10,5 @@ Projets et connexions : registre des projets en lecture et tests de connexion, i
 | Registre | façade sans migration (`agent_socle.projets`) : projets Cucumber (`<AGENT_DATA_DIR>/.tmp/cucumber/<client>/projet.json`) et applications du manager (`commun.toml` de `SAVOYE_CONFIG_DIR`), sans fusion |
 | Secrets | non déplacés : `.env` de `AGENT_DATA_DIR` et accès transmis par le manager ; l'API n'en sert aucun |
 | Connexion OIDC | `secrets.toml` d'agent-scrum-master, lu sur place (`[secrets] files`) |
-| Installation | `pip install -r requirements.txt` (socle `v0.2.0`) ; pendant le chantier `pip install -e ../agent-socle` |
+| Installation | `pip install -r requirements.txt` (socle `v0.7.0`) ; pendant le chantier `pip install -e ../agent-socle` |
 | Tests | `python -m pytest -q` ; `test_independance.py` interdit tout import d'un autre agent |
