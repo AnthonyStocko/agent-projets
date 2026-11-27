@@ -8,7 +8,7 @@ INTERDITS = ("tools", "webhook_server", "mcp_lecture", "manager")
 
 def test_aucun_import_d_un_autre_agent():
     fautes = []
-    for f in sorted(p for p in RACINE.rglob("*.py") if "tests" not in p.parts and ".venv" not in p.parts):
+    for f in sorted(p for p in RACINE.rglob("*.py") if "tests" not in p.parts and not {".venv", "venv"} & set(p.parts)):
         for n in ast.walk(ast.parse(f.read_text(encoding="utf-8"))):
             noms = [a.name for a in n.names] if isinstance(n, ast.Import) else \
                 [n.module or ""] if isinstance(n, ast.ImportFrom) else []

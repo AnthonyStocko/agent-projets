@@ -40,7 +40,7 @@ def render_registre() -> None:
     """Registre des projets : projets Cucumber et applications du manager, sans fusion (lecture seule)."""
     registre = projets.registre()
     st.subheader("🗂️ Projets")
-    st.caption("Lecture seule : projets Cucumber (réglages d'agent-scrum-master) et applications du manager "
+    st.caption("Lecture seule : projets Cucumber (réglages d'agent-cucumber) et applications du manager "
                f"(commun.toml de {projets.dossier_manager()}). API : {projets.api()}/projets")
     if not registre:
         st.info("Aucun projet connu.", icon=":material/info:")
